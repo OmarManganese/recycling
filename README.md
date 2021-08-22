@@ -89,7 +89,7 @@ In the "days" and "recycling_materials" tables will also be inserted the data au
    ```
 6. Start the local development server
    ```sh
-   php artisan migrate --seed
+   php artisan serve
    ```
    You can now access the server at http://localhost:8000
 
