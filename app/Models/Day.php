@@ -9,7 +9,7 @@ class Day extends Model
 {
     use HasFactory;
 
-    public function annotation() {
+    public function annotations() {
         return $this->hasMany(Annotation::class);
     }
 }

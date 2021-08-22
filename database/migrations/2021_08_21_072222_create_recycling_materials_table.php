@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\DB;
+use App\Models\RecyclingMaterial;
 
 class CreateRecyclingMaterialsTable extends Migration
 {
@@ -17,7 +17,6 @@ class CreateRecyclingMaterialsTable extends Migration
         Schema::create('recycling_materials', function (Blueprint $table) {
             $table->id();
             $table->string('material');
-            $table->timestamps();
         });
 
         $materials = [
@@ -35,7 +34,7 @@ class CreateRecyclingMaterialsTable extends Migration
                 $materials
             );
 
-        DB::table('recycling_materials')->insert($materialsInTable);
+        RecyclingMaterial::insert($materialsInTable);
     }
 
     /**
